@@ -1,5 +1,6 @@
-import './bootstrap';
 import { createApp } from 'vue';
-import App from './App.vue';
+import Login from './comp/Login.vue';
+import Stats from './comp/Stats.vue';
 
-createApp(App).mount('#app');
+createApp(Login).mount('#login');
+createApp(Stats).mount('#stats');

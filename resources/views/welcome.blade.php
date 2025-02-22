@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html class="bg-gray-900">
 <head>
-    <title>Laravel + Vue 3 with Vite</title>
+    <title>Login</title>
     @vite('resources/css/app.css')
-</head>
-<body>
-    <div id="app"></div>
-
     @vite('resources/js/app.js')
-</body>
+</head>
+    <body>
+        <div id="stats"></div>
+        <div id="login"></div>
+    </body>
 </html>
