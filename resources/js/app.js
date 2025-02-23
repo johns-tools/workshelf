@@ -1,6 +1,9 @@
-import { createApp } from 'vue';
-import Login from './comp/Login.vue';
-import Stats from './comp/Stats.vue';
+import "./bootstrap";
+import { createApp } from 'vue'; // ???? HU!!
+import Login from './components/Login.vue';
+import Stats from './components/Stats.vue';
 
-createApp(Login).mount('#login');
-createApp(Stats).mount('#stats');
+const app = createApp({});
+app.component('login', Login);
+app.component('stats', Stats);
+app.mount('#app');

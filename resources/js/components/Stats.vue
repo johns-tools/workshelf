@@ -20,6 +20,5 @@
     { name: 'Up Time', value: '8,669', unit: 'mins'  },
     { name: 'GIT Workflow Running', value: 'yes' },
     { name: 'All Tests Passing', value: 'yes'},
-    
   ]
   </script>

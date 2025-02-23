@@ -10,4 +10,10 @@ export default defineConfig({
         }),
         vue(),
     ],
+    resolve: {
+        alias: {
+            // Alias Vue to use the full build with the runtime template compiler
+            vue: 'vue/dist/vue.esm-bundler.js'
+        }
+    }
 });
