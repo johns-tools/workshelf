@@ -7,16 +7,12 @@
 </head>
     <body class="h-full">
 
-        <?php // Move to controller.
-           $data = ["one" => 1, "two" => 2, "three" => 3];
-        ?>
-
         <div id="app">
-            <login class="flex flex-col justify-middle items-center h-full" 
+            <login class="flex flex-col items-center h-full justify-middle"
                    :init-data='@json($data)'
                    csrf-token='{{ csrf_token() }}'>
             </login>
         </div>
-        
+
     </body>
 </html>

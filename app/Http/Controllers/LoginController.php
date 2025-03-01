@@ -8,7 +8,8 @@ class LoginController extends Controller
 {
     public function applicationLanding()
     {
-        return view('login_landing_page');
+        $data = ["one", "two", "three"];
+        return view('login_landing_page',compact('data'));
     }
 
     public function adminDashboard()
