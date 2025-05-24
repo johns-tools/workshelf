@@ -1,0 +1,59 @@
+<!-- File: MsToMinutes.vue -->
+<template>
+<div class="flex flex-col justify-center min-w-full min-h-full px-6 py-12 flex- lg:px-8">
+  <div class="flex flex-col max-w-xs gap-4">
+    <label class="flex flex-col gap-2">
+      <span class="text-sm font-medium text-gray-700">Milliseconds to Minutes</span>
+      <input
+        v-model.number="ms"
+        type="number"
+        min="0"
+        class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </label>
+
+    <button
+      @click="convert"
+      :disabled="loading"
+      class="px-4 py-2 font-semibold text-white transition bg-blue-600 rounded-lg hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+    >
+      {{ loading ? 'Converting…' : 'Convert' }}
+    </button>
+
+    <p v-if="result !== null" class="text-gray-800">
+      {{ ms }} ms = <strong>{{ result }}</strong> minute<span v-if="result !== 1">s</span>
+    </p>
+
+    <p v-if="error" class="text-red-600">{{ error }}</p>
+  </div>
+</div>
+</template>
+
+<script setup>
+    import { ref } from 'vue'
+    import axios from 'axios'
+
+    const ms      = ref(450000)  // demo default
+    const result  = ref(null)
+    const error   = ref('')
+    const loading = ref(false)
+
+    async function convert () {
+    error.value = ''
+    result.value = null
+    loading.value = true
+
+    try {
+        const { data } = await axios.get(
+        'http://workshelf.test/convert-ms-to-minutes',
+        { params: { ms_value: ms.value } }
+        )
+        result.value = data.ms_as_minutes
+    } catch (e) {
+        error.value = 'Conversion failed. Check the console.'
+        console.error(e)
+    } finally {
+        loading.value = false
+    }
+    }
+</script>
