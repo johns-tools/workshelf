@@ -7,8 +7,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TimeConversionController;
 
 Route::get('/convert-ms-to-minutes', [TimeConversionController::class, 'convertMsToMinutes']);
-// Route::get('/python-run', [PythonController::class, 'run']);
 
+// Route::get('/python-run', [PythonController::class, 'run']);
 // Data Admin
 // Route::get('/', [LoginController::class, 'applicationLanding'])->name('application.landing');
 // Route::get('/admin/dashboard', [LoginController::class, 'adminDashboard'])->name('admin.dashboard');
