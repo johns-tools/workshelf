@@ -6,8 +6,8 @@ use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TimeConversionController;
 
-Route::get('/convert-ms-to-minutes-view', [TimeConversionController::class, 'loadView']);
-Route::get('/convert-ms-to-minutes', [TimeConversionController::class, 'convertMsToMinutes']);
+Route::get('/convert-ms-to-minutes-view', [TimeConversionController::class, 'loadView'])->middleware('throttle:burst');
+Route::get('/convert-ms-to-minutes', [TimeConversionController::class, 'convertMsToMinutes'])->middleware('throttle:burst');
 
 // Route::get('/python-run', [PythonController::class, 'run']);
 // Data Admin
