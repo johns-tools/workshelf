@@ -21,7 +21,7 @@
     </button>
 
     <p v-if="result !== null" class="text-gray-800">
-      {{ ms }} ms = <strong>{{ result }}</strong> minute<span v-if="result !== 1">s</span>
+      <strong>{{ result }}</strong> minute<span v-if="result !== 1">s</span>
     </p>
 
     <p v-if="error" class="text-red-600">{{ error }}</p>
