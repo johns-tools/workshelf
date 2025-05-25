@@ -33,7 +33,7 @@
     import { ref } from 'vue'
     import axios from 'axios'
 
-    let ms      = 450000  // demo default
+    const ms      = ref(450000)  // demo default
     const result  = ref(null)
     const error   = ref('')
     const loading = ref(false)
