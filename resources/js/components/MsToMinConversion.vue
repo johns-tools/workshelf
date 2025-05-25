@@ -45,7 +45,7 @@
 
     try {
         const { data } = await axios.get(
-        'http://workshelf.test/convert-ms-to-minutes',
+        '/workshelf.test/convert-ms-to-minutes',
         { params: { ms_value: ms.value } }
         )
         result.value = data.ms_as_minutes
