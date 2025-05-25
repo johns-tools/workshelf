@@ -33,27 +33,27 @@
     import { ref } from 'vue'
     import axios from 'axios'
 
-    const ms      = ref(450000)  // demo default
+    let ms      = 450000  // demo default
     const result  = ref(null)
     const error   = ref('')
     const loading = ref(false)
 
     async function convert () {
-    error.value = ''
-    result.value = null
-    loading.value = true
+        error.value = ''
+        result.value = null
+        loading.value = true
 
-    try {
-        const { data } = await axios.get(
-        '/convert-ms-to-minutes',
-        { params: { ms_value: ms.value } }
-        )
-        result.value = data.ms_as_minutes
-    } catch (e) {
-        error.value = 'Conversion failed. Check the console.'
-        console.error(e)
-    } finally {
-        loading.value = false
-    }
+        try {
+            const { data } = await axios.get(
+            '/convert-ms-to-minutes',
+            { params: { ms_value: ms.value } }
+            )
+            result.value = data.ms_as_minutes
+        } catch (e) {
+            error.value = 'Conversion failed. Check the console.'
+            console.error(e)
+        } finally {
+            loading.value = false
+        }
     }
 </script>
