@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\PythonController;
-use App\Http\Controllers\LoginController;
+// use App\Http\Controllers\PythonController;
+// use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TimeConversionController;
 
 Route::get('/convert-ms-to-minutes-view', [TimeConversionController::class, 'loadView']);
