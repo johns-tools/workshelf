@@ -28,7 +28,7 @@ class PythonRunner
         $diskScriptPath = $this->pathAndFileChecks($scriptPath);
 
         // Run the target script.
-        $process = new Process(['python', $diskScriptPath]);
+        $process = new Process(['python3', $diskScriptPath]);
         $process->setInput(json_encode($payload));
         $process->setTimeout(60);
         $process->run();
