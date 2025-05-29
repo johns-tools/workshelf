@@ -1,0 +1,45 @@
+<template>
+  <Listbox as="div" v-model="selected">
+    <ListboxLabel class="block font-medium text-gray-900 text-sm/6">Select Endpoint</ListboxLabel>
+    <div class="relative mt-2">
+      <ListboxButton class="grid w-full cursor-default grid-cols-1 rounded-md bg-white py-1.5 pl-3 pr-2 text-left text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+        <span class="flex w-full col-start-1 row-start-1 gap-2 pr-6">
+          <span class="truncate">{{ selected.name }}</span>
+          <span class="text-gray-500 truncate">{{ selected.username }}</span>
+        </span>
+        <ChevronUpDownIcon class="self-center col-start-1 row-start-1 text-gray-500 size-5 justify-self-end sm:size-4" aria-hidden="true" />
+      </ListboxButton>
+
+      <transition leave-active-class="transition duration-100 ease-in" leave-from-class="opacity-100" leave-to-class="opacity-0">
+        <ListboxOptions class="absolute z-10 w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black/5 focus:outline-none sm:text-sm">
+          <ListboxOption as="template" v-for="item in data" :key="item.username" :value="item" v-slot="{ active, selected }">
+            <li :class="[active ? 'bg-indigo-600 text-white outline-none' : 'text-gray-900', 'relative cursor-default select-none py-2 pl-3 pr-9']">
+              <div class="flex">
+                <span :class="[selected ? 'font-semibold' : 'font-normal', 'truncate']">{{ item.name }}</span>
+                <span :class="[active ? 'text-indigo-200' : 'text-gray-500', 'ml-2 truncate']">{{ item.type }}</span>
+              </div>
+
+              <span v-if="selected" :class="[active ? 'text-white' : 'text-indigo-600', 'absolute inset-y-0 right-0 flex items-center pr-4']">
+                <CheckIcon class="size-5" aria-hidden="true" />
+              </span>
+            </li>
+          </ListboxOption>
+        </ListboxOptions>
+      </transition>
+    </div>
+  </Listbox>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import { Listbox, ListboxButton, ListboxLabel, ListboxOption, ListboxOptions } from '@headlessui/vue'
+import { ChevronUpDownIcon } from '@heroicons/vue/16/solid'
+import { CheckIcon } from '@heroicons/vue/20/solid'
+
+const data = [
+  { name: 'Milliseconds to Minutes', type: '@data-conversion' },
+  { name: 'Interest repayment calculation', type: '@data-calculation' },
+]
+
+const selected = ref(data[0])
+</script>

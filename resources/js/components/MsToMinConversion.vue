@@ -1,7 +1,10 @@
 <!-- File: MsToMinutes.vue -->
 <template>
-<div class="flex flex-col justify-center min-w-full min-h-full px-6 py-12 flex- lg:px-8">
-  <div class="flex flex-col max-w-xs gap-4">
+<div class="flex flex-col justify-center w-full min-h-full px-6 py-12 lg:px-8">
+  <div class="flex flex-col gap-4 min-w-[500px]">
+
+        <dropdown></dropdown>
+
     <label class="flex flex-col gap-2">
       <span class="text-sm font-medium text-gray-700">Milliseconds to Minutes</span>
       <input
@@ -32,6 +35,7 @@
 <script setup>
     import { ref } from 'vue'
     import axios from 'axios'
+    import dropdown from '@/components/UI/dropdown.vue';
 
     const ms      = ref(450000)  // demo default
     const result  = ref(null)
