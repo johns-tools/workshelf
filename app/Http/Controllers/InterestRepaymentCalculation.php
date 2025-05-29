@@ -27,7 +27,9 @@ class InterestRepaymentCalculation extends Controller
         $calculated = $this->interestService->calculateInterest($amount, $months, $interest);
 
         return response()->json(
-            ['result' => $calculated]
+            [
+                'calculated_result' => $calculated
+            ]
         );
 
     }
