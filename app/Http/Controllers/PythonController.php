@@ -13,7 +13,5 @@ class PythonController extends Controller
         $result = app(\App\Services\PythonRunner::class)->run('echo.py', [
             'laravel_input' => 'Hello from Laravel!'
         ]);
-
-        dd($result);
     }
 }

@@ -27,6 +27,8 @@ class PythonRunner
         // If they pass return the absolute path to the script.
         $diskScriptPath = $this->pathAndFileChecks($scriptPath);
 
+        dd(env('PYTHON_NAME'));
+
         // Run the target script.
         $process = new Process([env('PYTHON_NAME'), $diskScriptPath]);
         $process->setInput(json_encode($payload));
