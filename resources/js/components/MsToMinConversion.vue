@@ -45,7 +45,7 @@
 
         try {
             const { data } = await axios.get(
-            '/convert-ms-to-minutes',
+            '/api/convert-ms-to-minutes',
             { params: { ms_value: ms.value } }
             )
             result.value = data.ms_as_minutes
