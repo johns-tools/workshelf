@@ -3,6 +3,8 @@
 namespace App\Services;
 
 // Framework
+
+use Exception;
 use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
@@ -26,6 +28,10 @@ class PythonRunner
         // Run checks to make sure the path and script exist.
         // If they pass return the absolute path to the script.
         $diskScriptPath = $this->pathAndFileChecks($scriptPath);
+
+        if (!env('PYTHON_NAME')) {
+            throw new Exception("Required env PYTHON_NAME is null ??");
+        }
 
         // Run the target script.
         $process = new Process([env('PYTHON_NAME'), $diskScriptPath]);
