@@ -23,6 +23,9 @@ class RateLimitServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Heavy baseline – 10 req/min per IP
+        RateLimiter::for('heavy', fn () => Limit::perMinute(10));
+
         // Global baseline – 60 req/min per IP
         RateLimiter::for('global', fn () => Limit::perMinute(60));
 
