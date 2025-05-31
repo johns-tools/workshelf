@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html class="h-full bg-white-900">
+<head>
+    <title>ONE A DAY :: One Hundred APIs</title>
+    @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
+</head>
+    <body class="h-full">
+        <div id="app">
+            <one-hundred-apis ></one-hundred-apis>
+        </div>
+    </body>
+</html>

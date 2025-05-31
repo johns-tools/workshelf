@@ -4,11 +4,14 @@ use Illuminate\Support\Facades\Route;
 
 // use App\Http\Controllers\PythonController;
 // use App\Http\Controllers\LoginController;
-use App\Http\Controllers\TimeConversionController;
-use App\Http\Controllers\InterestRepaymentCalculation;
+
+//use App\Http\Controllers\TimeConversionController;
+//use App\Http\Controllers\InterestRepaymentCalculation;
+use App\Http\Controllers\OneHundredApisController;
+
 
 // # View #
-Route::get('/convert-ms-to-minutes-view', [TimeConversionController::class, 'loadView'])->middleware('throttle:heavy');
+Route::get('/one-hundred-apis', [OneHundredApisController::class, 'home'])->middleware('throttle:heavy');
 
 // # API end-points, to be moved to API #
 // Route::get('/convert-ms-to-minutes',

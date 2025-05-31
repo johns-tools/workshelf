@@ -13,6 +13,6 @@ Route::get('/convert-ms-to-minutes',
      [TimeConversionController::class, 'convertMsToMinutes'])
      ->middleware('throttle:heavy');
 
-Route::get('/interest-repayment-calculation/{amount}/{months}/{interest}',
+Route::get('/interest-repayment-calculation',
      [InterestRepaymentCalculation::class, 'calculateInterestBasedOnMonths'])
      ->middleware('throttle:heavy');
