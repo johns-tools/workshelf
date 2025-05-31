@@ -3,7 +3,7 @@
         <div class="flex flex-col gap-4 min-w-[500px]">
 
             <label class="flex flex-col gap-2">
-                <span class="text-sm font-medium text-gray-700">Loan Amount (£)</span>
+                <span class="text-sm font-medium text-gray-700">Loan Amount</span>
                 <input v-model.number="amount" type="number" min="0"
                     class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </label>
