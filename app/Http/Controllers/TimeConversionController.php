@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\TimeConversionService;
-
+use App\Http\Requests\ConvertMsToMinutesRequest;
 use Illuminate\Http\Request;
 
 class TimeConversionController extends Controller
@@ -14,7 +14,7 @@ class TimeConversionController extends Controller
         return view('ms_min_conversion');
     }
 
-    public function convertMsToMinutes(Request $request)
+    public function convertMsToMinutes(ConvertMsToMinutesRequest $request)
     {
         $msValue = (int)$request->get('ms_value'); // Get from request value.
         $minutes = TimeConversionService::convertMsToMinutes($msValue);
@@ -22,8 +22,5 @@ class TimeConversionController extends Controller
         $minutes['ms_as_minutes'] = number_format($minutes['ms_as_minutes'], 3);
 
         return response()->json($minutes);
-
-        // Need to handle JSON response for errors here.
-
     }
 }

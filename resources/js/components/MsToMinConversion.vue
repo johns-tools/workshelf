@@ -43,9 +43,9 @@ async function convert() {
             { params: { ms_value: ms.value } }
         )
         result.value = data.ms_as_minutes
-    } catch (e) {
-        error.value = 'Conversion failed. Check the console.'
-        console.error(e)
+    } catch (err) {
+        error.value = err.response.data.error_message
+        console.error(err)
     } finally {
         loading.value = false
     }
