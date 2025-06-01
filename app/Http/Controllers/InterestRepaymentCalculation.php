@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 // Services
 use App\Services\InterestCalculationService;
 
-// Framework
-use Illuminate\Http\Request;
+// Requests
+use App\Http\Requests\CalculateInterestRequest;
 
 class InterestRepaymentCalculation extends Controller
 {
@@ -18,14 +18,8 @@ class InterestRepaymentCalculation extends Controller
         $this->interestService = $interestService;
     }
 
-    public function calculateInterestBasedOnMonths(Request $request) // need to validate $amount, $months, $interest
+    public function calculateInterestBasedOnMonths(CalculateInterestRequest $request)
     {
-        // A required value check, internal.
-        if($message = $this->checkForRequiredValues($request))
-        {
-            return response()->json($this->constructErrorMessage($message), 500);
-        }
-
         // Format incoming request data.
         $amount   = (int)$request->get('amount');
         $months   = (int)$request->get('months');
@@ -43,41 +37,5 @@ class InterestRepaymentCalculation extends Controller
                 'calculated_result' => $calculated
             ]
         );
-
     }
-
-    // I wonder if it could be a good idea to push these into the service.
-    private function checkForRequiredValues($request)
-    {
-
-        $message = "";
-
-        if(!$request->get('amount'))
-        {
-            $message = "required: missing amount value";
-        }
-
-        if(!$request->get('months'))
-        {
-            $message = "required: missing months value";
-        }
-
-        if(!$request->get('interest'))
-        {
-            $message = "required: missing interest value";
-        }
-
-        if($message)
-        {
-            return $message;
-        }
-
-    }
-
-    // Simple error message generator, for one place to adjust.
-    private function constructErrorMessage($message)
-    {
-        return ['message' => $message];
-    }
-
 }

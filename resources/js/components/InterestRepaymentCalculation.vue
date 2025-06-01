@@ -67,7 +67,7 @@ async function submit() {
 
         result.value = data
     } catch (err) {
-        error.value = 'Calculation failed. Check the console.'
+        error.value = err.response.data.error_message
         console.error(err)
     } finally {
         loading.value = false
