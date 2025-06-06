@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Services\ElectricCarMileageService;
 use App\Http\Requests\CalculateEvMileageRequest;
 use Illuminate\Http\JsonResponse;

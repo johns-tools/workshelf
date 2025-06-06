@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
+
 // Services
 use App\Services\InterestCalculationService;
 
