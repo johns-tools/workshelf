@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TimeConversionController;
-use App\Http\Controllers\InterestRepaymentCalculation;
-use App\Http\Controllers\ElectricCarMileageController;
+use App\Http\Controllers\API\TimeConversionController;
+use App\Http\Controllers\API\InterestRepaymentCalculation;
+use App\Http\Controllers\API\ElectricCarMileageController;
 
 // Route::get('/user', function (Request $request) {
 //     return $request->user();

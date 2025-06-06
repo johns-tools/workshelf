@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
 use App\Services\ElectricCarMileageService;
 use App\Http\Requests\CalculateEvMileageRequest;
