@@ -6,6 +6,7 @@ import MsToMinConversion from './components/MsToMinConversion.vue'
 import InterestRepaymentCalculation from './components/InterestRepaymentCalculation.vue'
 import ElectricCarMileage from './components/ElectricCarMileage.vue'
 import OneHundredAPIs from './components/OneHundredAPIs.vue'
+import ApiDescription from './components/ApiDescription.vue'
 
 
 // import Login from './components/Login.vue';
@@ -24,6 +25,7 @@ app.use(pinia)
 app.component('msToMinConversion', MsToMinConversion)
 app.component('interestRepaymentCalculation', InterestRepaymentCalculation)
 app.component('electricCarMileage', ElectricCarMileage)
+app.component('apiDescription', ApiDescription)
 app.component('oneHundredApis', OneHundredAPIs)
 
 app.mount('#app');
