@@ -46,12 +46,9 @@ import { Listbox, ListboxButton, ListboxLabel, ListboxOption, ListboxOptions } f
 import { ChevronUpDownIcon } from '@heroicons/vue/16/solid'
 import { CheckIcon } from '@heroicons/vue/20/solid'
 import { useComponentVisibilityStore } from '@/stores/componentVisibility'
+import { apiEndpoints } from '@/data/apiEndpoints'
 
-const data = [
-    { name: 'Milliseconds to Minutes', type: '@data-conversion' },
-    { name: 'Interest Repayment Calculation', type: '@data-calculation' },
-    { name: 'Electric Car Mileage', type: '@ev-mileage' },
-]
+const data = apiEndpoints
 
 const selected = ref(data[0])
 const store = useComponentVisibilityStore()

@@ -6,7 +6,7 @@
     @vite('resources/js/app.js')
 </head>
     <body class="h-full">
-        <div id="app">
+        <div id="app" class="max-w-[75vw] mx-auto">
             <one-hundred-apis ></one-hundred-apis>
         </div>
     </body>
