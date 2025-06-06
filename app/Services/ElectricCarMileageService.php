@@ -13,7 +13,9 @@ class ElectricCarMileageService
      *
      * @return array
      */
-    public function calculate(float $batteryKwh, float $costPerKwh, float $rangeMiles): array
+    public function calculate(float $batteryKwh,
+                              float $costPerKwh,
+                              float $rangeMiles): array
     {
         if ($batteryKwh <= 0 || $costPerKwh <= 0 || $rangeMiles <= 0) {
             throw new \InvalidArgumentException("All values must be greater than zero.");
