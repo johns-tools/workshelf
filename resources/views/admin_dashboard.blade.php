@@ -7,9 +7,7 @@
 </head>
     <body class="h-full">
         
-        <div id="app">
-            <stats class="flex flex-col justify-middle items-center h-full"></stats>
-        </div>
+        <div id="app"></div>
 
     </body>
 </html>

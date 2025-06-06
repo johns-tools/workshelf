@@ -4,6 +4,7 @@
         <dropdown></dropdown>
         <ms-to-min-conversion v-show="store.showMsToMin"></ms-to-min-conversion>
         <interest-repayment-calculation v-show="store.showInterestRepayment"></interest-repayment-calculation>
+        <electric-car-mileage v-show="store.showElectricMileage"></electric-car-mileage>
     </div>
 </template>
 

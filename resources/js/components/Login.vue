@@ -39,7 +39,7 @@
             required: true,
         },
         csrfToken: {
-            type: Text,
+            type: String,
             required: true,
         }
     });

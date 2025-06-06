@@ -50,6 +50,7 @@ import { useComponentVisibilityStore } from '@/stores/componentVisibility'
 const data = [
     { name: 'Milliseconds to Minutes', type: '@data-conversion' },
     { name: 'Interest Repayment Calculation', type: '@data-calculation' },
+    { name: 'Electric Car Mileage', type: '@ev-mileage' },
 ]
 
 const selected = ref(data[0])

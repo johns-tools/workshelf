@@ -4,6 +4,7 @@ import { createPinia } from 'pinia'
 
 import MsToMinConversion from './components/MsToMinConversion.vue'
 import InterestRepaymentCalculation from './components/InterestRepaymentCalculation.vue'
+import ElectricCarMileage from './components/ElectricCarMileage.vue'
 import OneHundredAPIs from './components/OneHundredAPIs.vue'
 
 
@@ -22,6 +23,7 @@ app.use(pinia)
 
 app.component('msToMinConversion', MsToMinConversion)
 app.component('interestRepaymentCalculation', InterestRepaymentCalculation)
+app.component('electricCarMileage', ElectricCarMileage)
 app.component('oneHundredApis', OneHundredAPIs)
 
 app.mount('#app');
