@@ -7,7 +7,7 @@
 </head>
     <body class="h-full">
 
-        <div id="app">
+        <div id="app" class="max-w-[75vw] mx-auto">
             <login class="flex flex-col items-center h-full justify-middle"
                    :init-data='@json($data)'
                    csrf-token='{{ csrf_token() }}'>
