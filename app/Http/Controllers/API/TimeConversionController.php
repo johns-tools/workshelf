@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Services\TimeConversionService;
 use App\Http\Requests\ConvertMsToMinutesRequest;
 use Illuminate\Http\Request;
