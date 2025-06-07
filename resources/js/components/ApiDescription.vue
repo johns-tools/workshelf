@@ -1,8 +1,8 @@
 <template>
     <div class="flex flex-col justify-center w-full min-h-full px-6 py-12 lg:px-8">
         <div class="flex flex-col gap-4 min-w-[500px] text-gray-300">
-            <h2 class="text-lg font-semibold">API Descriptions</h2>
-            <ul class="list-disc space-y-2 pl-4">
+            <h2 class="text-lg font-semibold">API Endpoints so far:</h2>
+            <ul class="pl-4 space-y-2 list-disc">
                 <li>
                     <strong>/api/convert-ms-to-minutes</strong>
                     &ndash; Convert a number of milliseconds to minutes.
