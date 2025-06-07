@@ -32,10 +32,9 @@
 
       <section class="mb-6">
         <h2 class="pb-2 mb-4 text-2xl font-semibold border-b-2 border-gray-200">Professional Summary</h2>
-        <p class="leading-relaxed">Web Developer with over 15 years of professional experience, specialising in server side and API development using PHP (Laravel), Vue 3, and other modern web technologies.
-            Proven track record in the development of web based spatial data applications (maps) with developing and integrating large-scale data processing solutions with Python and PHP.
-            Deep understanding of developing scalable back-end architecture with Laravel and Python, cost/performance focused development with an API endpoint approach.</p>
-      </section>
+        <p class="leading-relaxed">Web developer with over 15 years’ professional experience, specialising in server-side and API development using PHP (Laravel), Vue 3 and other modern web technologies.
+            Proven track record in developing web-based spatial data applications (maps), and in designing and integrating large-scale data-processing solutions using Python and PHP.
+            Deep understanding of creating scalable back-end architectures with Laravel and Python, and of cost-performance-focused development via an API-endpoint approach.</section>
 
       <section class="mb-6">
         <h2 class="pb-2 mb-4 text-2xl font-semibold border-b-2 border-gray-200">Technical Skills</h2>
