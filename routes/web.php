@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\OneHundredApisController;
 
-// # View #
+// # View
+Route::get('/cv', function(){
+    return view('cv');
+});
 Route::get('/', [OneHundredApisController::class, 'home'])->middleware('throttle:heavy');
 Route::get('/one-hundred-apis', [OneHundredApisController::class, 'home'])->middleware('throttle:heavy');
 
