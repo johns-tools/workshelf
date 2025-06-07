@@ -2,13 +2,21 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Http\Controllers\Controller;
+// Services
 use App\Services\TimeConversionService;
+
+// Framework
+use App\Http\Controllers\Controller;
 use App\Http\Requests\ConvertMsToMinutesRequest;
-use Illuminate\Http\Request;
 
 class TimeConversionController extends Controller
 {
+    protected TimeConversionService $timeConversionService;
+
+    public function __construct(TimeConversionService $timeConversionService)
+    {
+        $this->timeConversionService = $timeConversionService;
+    }
 
     public function loadView()
     {
@@ -18,10 +26,10 @@ class TimeConversionController extends Controller
     public function convertMsToMinutes(ConvertMsToMinutesRequest $request)
     {
         $msValue = (int)$request->get('ms_value'); // Get from request value.
-        $minutes = TimeConversionService::convertMsToMinutes($msValue);
-        // Convert raw mins value to a shorter decimal version.
-        $minutes['ms_as_minutes'] = number_format($minutes['ms_as_minutes'], 3);
 
-        return response()->json($minutes);
+        return response()->json(
+            $this->timeConversionService->asJson($msValue)
+        );
     }
+
 }
