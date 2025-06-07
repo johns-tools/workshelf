@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Robinson - CV</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    >
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -20,7 +20,7 @@
         },
       }
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
+
   </head>
   <body class="font-sans text-gray-800 bg-gray-50">
     <div class="max-w-3xl p-6 mx-auto mt-10 bg-white rounded-lg shadow-lg">
