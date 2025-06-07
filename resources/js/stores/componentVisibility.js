@@ -19,7 +19,7 @@ export const useComponentVisibilityStore = defineStore('componentVisibility', {
         },
         showComponent(type) {
             this.resetAll()
-            if (type === '@api-description') this.showDescription = true
+            if (type === '@apis-information') this.showDescription = true
             if (type === '@data-conversion') this.showMsToMin = true
             if (type === '@data-calculation') this.showInterestRepayment = true
             if (type === '@ev-mileage') this.showElectricMileage = true

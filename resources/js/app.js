@@ -7,7 +7,7 @@ import InterestRepaymentCalculation from './components/InterestRepaymentCalculat
 import ElectricCarMileage from './components/ElectricCarMileage.vue'
 import PetrolCarMileage from './components/PetrolCarMileage.vue'
 import OneHundredAPIs from './components/OneHundredAPIs.vue'
-import ApiDescription from './components/ApiDescription.vue'
+import APIsInformation from './components/APIsInformation.vue'
 
 
 // import Login from './components/Login.vue';
@@ -27,7 +27,7 @@ app.component('msToMinConversion', MsToMinConversion)
 app.component('interestRepaymentCalculation', InterestRepaymentCalculation)
 app.component('electricCarMileage', ElectricCarMileage)
 app.component('petrolCarMileage', PetrolCarMileage)
-app.component('apiDescription', ApiDescription)
+app.component('apisInformation', APIsInformation)
 app.component('oneHundredApis', OneHundredAPIs)
 
 app.mount('#app');

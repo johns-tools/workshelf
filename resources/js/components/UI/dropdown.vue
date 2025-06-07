@@ -14,15 +14,14 @@
 
             <transition leave-active-class="transition duration-100 ease-in" leave-from-class="opacity-100"
                 leave-to-class="opacity-0">
-                <ListboxOptions class="absolute z-10 w-full py-1 mt-1 overflow-auto text-base bg-gray-800 rounded-sm shadow-lg max-h-60
-                                       ring-1 ring-gray-700 focus:outline-none sm:text-sm">
+                <ListboxOptions class="absolute z-10 w-full py-1 mt-1 overflow-auto text-base bg-gray-800 rounded-sm shadow-lg max-h-60 ring-1 ring-gray-700 focus:outline-none sm:text-sm">
 
                     <ListboxOption as="template" v-for="item in data" :key="item.type" :value="item"
                         v-slot="{ active, selected }">
 
                         <li class="border-b border-gray-700 rounded-sm"
                             :class="[active ? 'bg-indigo-600 text-white outline-none' : 'text-gray-100', 'relative cursor-default select-none py-2 pl-3 pr-9']">
-                            
+
                             <div class="flex">
                                 <span :class="[selected ? 'font-semibold' : 'font-normal', 'truncate']">{{ item.name }}</span>
                                 <span :class="[active ? 'text-indigo-200' : 'text-gray-400', 'ml-2 truncate']">{{ item.type }}</span>
