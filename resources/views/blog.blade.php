@@ -14,11 +14,11 @@
       gtag('config', 'G-R8QDSQRD0Z');
     </script>
 </head>
-<body class="h-full bg-gray-900 text-white">
-    <div class="max-w-3xl mx-auto py-8 px-4 space-y-6">
-        <h1 class="text-2xl font-bold mb-4">100APIsOfCode Posts</h1>
+<body class="h-full text-white bg-gray-900">
+    <div class="max-w-3xl px-4 py-8 mx-auto space-y-6">
+        <h1 class="mb-4 text-2xl font-bold">100 APIs of Code - Posts:</h1>
         @foreach ($articles as $article)
-            <div class="border border-gray-700 p-4 rounded shadow">
+            <div class="p-4 border border-gray-700 rounded shadow">
                 <a href="{{ $article['url'] }}" class="text-lg font-semibold text-blue-400 hover:underline">
                     {{ $article['title'] }}
                 </a>
