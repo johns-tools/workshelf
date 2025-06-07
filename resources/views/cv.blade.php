@@ -26,9 +26,10 @@
     <div class="max-w-3xl p-6 mx-auto mt-10 bg-white rounded-lg shadow-lg">
       <header class="mb-6 text-center">
         <h1 class="text-4xl font-extrabold">John Robinson</h1>
-        <p class="mt-2 text-gray-600">Email: <a href="mailto:johns.development.projects@gmail.com" class="text-blue-600 hover:underline">johns.development.projects@gmail.com</a></p>
-        <p class="text-gray-600"><a href="https://oneaday.dev/one-hundred-apis" class="text-blue-600 hover:underline" target="_blank">oneaday.dev/one-hundred-apis</a></p>
-      </header>
+        <p class="mt-2 text-gray-600">Blog: <a href="https://oneaday.dev/blog" class="text-blue-600 hover:underline" target="_blank">https://oneaday.dev/blog</a></p>
+        <p class="text-gray-600">Web: <a href="https://oneaday.dev/one-hundred-apis" class="text-blue-600 hover:underline" target="_blank">oneaday.dev/one-hundred-apis</a></p>
+        <p class="text-gray-600">Contact: <a href="mailto:johns.development.projects@gmail.com" class="text-blue-600 hover:underline">johns.development.projects@gmail.com</a></p>
+    </header>
 
       <section class="mb-6">
         <h2 class="pb-2 mb-4 text-2xl font-semibold border-b-2 border-gray-200">Professional Summary</h2>
