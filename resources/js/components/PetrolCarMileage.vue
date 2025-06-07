@@ -4,27 +4,24 @@
             <label class="flex flex-col gap-2">
                 <span class="text-sm font-medium text-gray-300">Tank Capacity (litres)</span>
                 <input v-model.number="tankLitres" type="number" min="0"
-                    class="w-full p-2 bg-gray-800 text-gray-100 placeholder-gray-400 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    class="w-full p-2 text-gray-100 placeholder-gray-400 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </label>
             <label class="flex flex-col gap-2">
                 <span class="text-sm font-medium text-gray-300">Cost per litre</span>
                 <input v-model.number="costPerLitre" type="number" step="0.01" min="0"
-                    class="w-full p-2 bg-gray-800 text-gray-100 placeholder-gray-400 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    class="w-full p-2 text-gray-100 placeholder-gray-400 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </label>
             <label class="flex flex-col gap-2">
                 <span class="text-sm font-medium text-gray-300">Range (miles)</span>
                 <input v-model.number="rangeMiles" type="number" min="0"
-                    class="w-full p-2 bg-gray-800 text-gray-100 placeholder-gray-400 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    class="w-full p-2 text-gray-100 placeholder-gray-400 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </label>
             <button @click="submit" :disabled="loading"
                 class="px-4 py-2 font-semibold text-white transition bg-blue-600 rounded-lg hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50">
                 {{ loading ? 'Calculating…' : 'Calculate' }}
             </button>
             <p v-if="error" class="text-red-600">{{ error }}</p>
-            <pre v-if="result"
-                class="p-4 mt-4 overflow-x-auto text-sm text-left text-gray-200 whitespace-pre-wrap bg-gray-800 rounded-lg">
-                {{ formattedResult }}
-      </pre>
+            <pre v-if="result" class="p-4 mt-4 overflow-x-auto text-sm text-left text-gray-200 whitespace-pre-wrap bg-gray-800 rounded-lg">{{ formattedResult }}</pre>
         </div>
     </div>
 </template>
