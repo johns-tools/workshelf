@@ -6,3 +6,7 @@ use App\Http\Controllers\OneHundredApisController;
 
 // # View #
 Route::get('/one-hundred-apis', [OneHundredApisController::class, 'home'])->middleware('throttle:heavy');
+
+Route::get('/petrol-mileage', function () {
+    return view('petrol_mileage');
+})->middleware('throttle:heavy');

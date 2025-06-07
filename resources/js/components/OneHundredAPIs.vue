@@ -6,12 +6,14 @@
         <ms-to-min-conversion v-show="store.showMsToMin"></ms-to-min-conversion>
         <interest-repayment-calculation v-show="store.showInterestRepayment"></interest-repayment-calculation>
         <electric-car-mileage v-show="store.showElectricMileage"></electric-car-mileage>
+        <petrol-car-mileage v-show="store.showPetrolMileage"></petrol-car-mileage>
     </div>
 </template>
 
 <script setup>
 import dropdown from '@/components/UI/dropdown.vue';
 import ApiDescription from '@/components/ApiDescription.vue';
+import PetrolCarMileage from '@/components/PetrolCarMileage.vue';
 import { useComponentVisibilityStore } from '../stores/componentVisibility'
 import { apiEndpoints } from '@/data/apiEndpoints'
 const store = useComponentVisibilityStore()

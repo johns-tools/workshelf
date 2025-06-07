@@ -15,6 +15,10 @@
                     <strong>/api/calculate-ev-mileage</strong>
                     &ndash; Estimate electric vehicle charge cost and cost per mile.
                 </li>
+                <li>
+                    <strong>/api/calculate-petrol-mileage</strong>
+                    &ndash; Estimate petrol vehicle fuel cost and cost per mile.
+                </li>
             </ul>
         </div>
     </div>
