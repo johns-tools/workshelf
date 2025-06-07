@@ -4,9 +4,9 @@
         <div class="flex flex-col gap-4 min-w-[500px]">
 
             <label class="flex flex-col gap-2">
-                <span class="text-sm font-medium text-gray-700">Milliseconds to Minutes</span>
+                <span class="text-sm font-medium text-gray-300">Milliseconds to Minutes</span>
                 <input v-model.number="ms" type="number" min="0"
-                    class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    class="w-full p-2 bg-gray-800 text-gray-100 placeholder-gray-400 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </label>
 
             <button @click="convert" :disabled="loading"
@@ -14,7 +14,7 @@
                 {{ loading ? 'Converting…' : 'Convert' }}
             </button>
 
-            <p v-if="result !== null" class="text-gray-800">
+            <p v-if="result !== null" class="text-gray-300">
                 <strong>{{ result }}</strong> minute<span v-if="result !== 1">s</span>
             </p>
 

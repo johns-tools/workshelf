@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col justify-center min-w-full min-h-full px-6 py-6 lg:px-8">
+    <div class="flex flex-col justify-center min-w-full min-h-full px-6 py-6 lg:px-8 text-gray-300">
         <h1 class="flex flex-col justify-center min-w-full pt-8">{{ apiEndpoints.length - 1 }} out of 100 API Endpoints</h1>
         <dropdown></dropdown>
         <api-description v-show="store.showDescription"></api-description>

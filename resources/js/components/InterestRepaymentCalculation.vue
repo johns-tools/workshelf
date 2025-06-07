@@ -3,21 +3,21 @@
         <div class="flex flex-col gap-4 min-w-[500px]">
 
             <label class="flex flex-col gap-2">
-                <span class="text-sm font-medium text-gray-700">Loan Amount</span>
+                <span class="text-sm font-medium text-gray-300">Loan Amount</span>
                 <input v-model.number="amount" type="number" min="0"
-                    class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    class="w-full p-2 bg-gray-800 text-gray-100 placeholder-gray-400 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </label>
 
             <label class="flex flex-col gap-2">
-                <span class="text-sm font-medium text-gray-700">Repayment Months</span>
+                <span class="text-sm font-medium text-gray-300">Repayment Months</span>
                 <input v-model.number="months" type="number" min="1"
-                    class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    class="w-full p-2 bg-gray-800 text-gray-100 placeholder-gray-400 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </label>
 
             <label class="flex flex-col gap-2">
-                <span class="text-sm font-medium text-gray-700">Interest Rate (%)</span>
+                <span class="text-sm font-medium text-gray-300">Interest Rate (%)</span>
                 <input v-model.number="interest" type="number" step="0.01" min="0"
-                    class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    class="w-full p-2 bg-gray-800 text-gray-100 placeholder-gray-400 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </label>
 
             <button @click="submit" :disabled="loading"
@@ -28,8 +28,8 @@
             <p v-if="error" class="text-red-600">{{ error }}</p>
 
             <pre v-if="result"
-                class="p-4 mt-4 overflow-x-auto text-sm text-left text-gray-800 whitespace-pre-wrap bg-gray-100 rounded-lg">
-{{ formattedResult }}
+                class="p-4 mt-4 overflow-x-auto text-sm text-left text-gray-200 whitespace-pre-wrap bg-gray-800 rounded-lg">
+                {{ formattedResult }}
       </pre>
         </div>
     </div>
