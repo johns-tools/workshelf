@@ -46,7 +46,7 @@ class TimeConversionService
     public function asJson(float|int $ms): array
     {
         return [
-            'ms_as_minutes' => $this->msToMinutes($ms),
+            'ms_as_minutes' => number_format($this->msToMinutes($ms), 2),
         ];
     }
 
