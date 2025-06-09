@@ -22,7 +22,8 @@ class PetrolCarMileageController extends Controller
             $result = $this->petrolCarMileageService->calculate(
                 $request->input('tank_litres'),
                 $request->input('cost_per_litre'),
-                $request->input('range_miles')
+                $request->input('range_miles'),
+                $request->input('mpg')
             );
 
             return response()->json([

@@ -18,7 +18,8 @@ class CalculatePetrolMileageRequest extends FormRequest
         return [
             'tank_litres' => ['required', 'numeric', 'gt:0'],
             'cost_per_litre' => ['required', 'numeric', 'gt:0'],
-            'range_miles' => ['required', 'numeric', 'gt:0'],
+            'range_miles' => ['required_without:mpg', 'nullable', 'numeric', 'gt:0'],
+            'mpg' => ['required_without:range_miles', 'nullable', 'numeric', 'gt:0'],
         ];
     }
 
@@ -33,9 +34,13 @@ class CalculatePetrolMileageRequest extends FormRequest
             'cost_per_litre.numeric' => 'The cost per litre must be a number',
             'cost_per_litre.gt' => 'The cost per litre must be greater than zero',
 
-            'range_miles.required' => 'The range in miles is required',
+            'range_miles.required_without' => 'The range in miles is required when mpg is not provided',
             'range_miles.numeric' => 'The range must be a number',
             'range_miles.gt' => 'The range must be greater than zero',
+
+            'mpg.required_without' => 'The miles per gallon is required when range is not provided',
+            'mpg.numeric' => 'Miles per gallon must be a number',
+            'mpg.gt' => 'Miles per gallon must be greater than zero',
         ];
     }
 

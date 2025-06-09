@@ -16,6 +16,11 @@
                 <input v-model.number="rangeMiles" type="number" min="0"
                     class="w-full p-2 text-gray-100 placeholder-gray-400 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </label>
+            <label class="flex flex-col gap-2">
+                <span class="text-sm font-medium text-gray-300">Miles per gallon (UK)</span>
+                <input v-model.number="mpg" type="number" min="0"
+                    class="w-full p-2 text-gray-100 placeholder-gray-400 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </label>
             <button @click="submit" :disabled="loading"
                 class="px-4 py-2 font-semibold text-white transition bg-blue-600 rounded-lg hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50">
                 {{ loading ? 'Calculating…' : 'Calculate' }}
@@ -33,6 +38,7 @@ import axios from 'axios'
 const tankLitres = ref(50)
 const costPerLitre = ref(1.50)
 const rangeMiles = ref(400)
+const mpg = ref(40)
 
 const loading = ref(false)
 const error = ref('')
@@ -48,7 +54,8 @@ async function submit() {
         const { data } = await axios.post('/api/calculate-petrol-mileage', {
             tank_litres: tankLitres.value,
             cost_per_litre: costPerLitre.value,
-            range_miles: rangeMiles.value
+            range_miles: rangeMiles.value,
+            mpg: mpg.value
         })
         result.value = data.data ?? data
     } catch (err) {
