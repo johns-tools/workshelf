@@ -32,13 +32,20 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import axios from 'axios'
 
 const tankLitres = ref(50)
 const costPerLitre = ref(1.50)
 const rangeMiles = ref(400)
 const mpg = ref(40)
+
+watch([tankLitres, mpg], () => {
+    if (mpg.value > 0 && tankLitres.value > 0) {
+        const ukGallons = tankLitres.value / 4.54609
+        rangeMiles.value = parseFloat((ukGallons * mpg.value).toFixed(2))
+    }
+})
 
 const loading = ref(false)
 const error = ref('')
