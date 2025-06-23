@@ -23,6 +23,10 @@
                     <strong>/api/calculate-area</strong>
                     &ndash; Calculate area from length and width in centimetres.
                 </li>
+                <li>
+                    <strong>/api/percentage-increase</strong>
+                    &ndash; Calculate compound interest with an optional monthly addition.
+                </li>
             </ul>
         </div>
     </div>
