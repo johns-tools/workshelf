@@ -8,6 +8,7 @@ export const useComponentVisibilityStore = defineStore('componentVisibility', {
         showInterestRepayment: false,
         showElectricMileage: false,
         showPetrolMileage: false,
+        showAreaConversion: false,
     }),
     actions: {
         resetAll() {
@@ -16,6 +17,7 @@ export const useComponentVisibilityStore = defineStore('componentVisibility', {
             this.showInterestRepayment = false
             this.showElectricMileage = false
             this.showPetrolMileage = false
+            this.showAreaConversion = false
         },
         showComponent(type) {
             this.resetAll()
@@ -24,6 +26,7 @@ export const useComponentVisibilityStore = defineStore('componentVisibility', {
             if (type === '@data-calculation') this.showInterestRepayment = true
             if (type === '@ev-mileage') this.showElectricMileage = true
             if (type === '@petrol-mileage') this.showPetrolMileage = true
+            if (type === '@area-conversion') this.showAreaConversion = true
         }
     }
 })

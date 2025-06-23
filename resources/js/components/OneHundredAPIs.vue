@@ -7,6 +7,7 @@
         <interest-repayment-calculation v-show="store.showInterestRepayment"></interest-repayment-calculation>
         <electric-car-mileage v-show="store.showElectricMileage"></electric-car-mileage>
         <petrol-car-mileage v-show="store.showPetrolMileage"></petrol-car-mileage>
+        <area-conversion v-show="store.showAreaConversion"></area-conversion>
     </div>
 </template>
 

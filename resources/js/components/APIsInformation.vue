@@ -19,6 +19,10 @@
                     <strong>/api/calculate-petrol-mileage</strong>
                     &ndash; Estimate petrol vehicle fuel cost and cost per mile.
                 </li>
+                <li>
+                    <strong>/api/calculate-area</strong>
+                    &ndash; Calculate area from length and width in centimetres.
+                </li>
             </ul>
         </div>
     </div>

@@ -16,3 +16,7 @@ Route::get('/blog', [BlogController::class, 'index'])->middleware('throttle:heav
 // Route::get('/petrol-mileage', function () {
 //     return view('petrol_mileage');
 // })->middleware('throttle:heavy');
+
+// Route::get('/area-conversion', function () {
+//     return view('area_conversion');
+// })->middleware('throttle:heavy');

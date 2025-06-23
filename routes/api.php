@@ -5,6 +5,7 @@ use App\Http\Controllers\API\TimeConversionController;
 use App\Http\Controllers\API\InterestRepaymentCalculation;
 use App\Http\Controllers\API\ElectricCarMileageController;
 use App\Http\Controllers\API\PetrolCarMileageController;
+use App\Http\Controllers\API\AreaConversionController;
 
 // Route::get('/user', function (Request $request) {
 //     return $request->user();
@@ -24,4 +25,8 @@ Route::post('/calculate-ev-mileage',
 
 Route::post('/calculate-petrol-mileage',
      [PetrolCarMileageController::class, 'calculate'])
+     ->middleware('throttle:heavy');
+
+Route::get('/calculate-area',
+     [AreaConversionController::class, 'calculate'])
      ->middleware('throttle:heavy');
