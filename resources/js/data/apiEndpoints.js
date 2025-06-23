@@ -5,4 +5,5 @@ export const apiEndpoints = [
     { name: 'Electric Car Mileage', type: '@ev-mileage' },
     { name: 'Petrol Car Mileage', type: '@petrol-mileage' },
     { name: 'Area Conversion', type: '@area-conversion' },
+    { name: 'Percentage Increase', type: '@percentage-increase' },
 ];
