@@ -5,30 +5,27 @@ namespace App\Services;
 class PercentageIncreaseService
 {
     /**
-     * Calculate compound growth with optional monthly additions.
+     * Calculate compounded growth with an optional additional amount applied
+     * after each month's interest.
      */
-    public function calculate(float $principal,
-                              float $rate,
-                              int $months,
-                              float $monthlyAddition = 0): array
-    {
-        if ($principal <= 0 || $rate <= 0 || $months <= 0 || $monthlyAddition < 0) {
-            throw new \InvalidArgumentException('All values must be positive and monthly addition cannot be negative.');
+    public function compound(
+        float $initialAmount,
+        int $months,
+        float $monthlyPercent,
+        float $additionalPerMonth = 0
+    ): float {
+        if ($initialAmount < 0 || $months < 0) {
+            throw new \InvalidArgumentException('Initial amount and months must be non-negative.');
         }
 
-        $monthlyRate = $rate / 100 / 12;
-        $amount = $principal;
-        $totalInterest = 0;
+        $amount = $initialAmount;
+        $rate = $monthlyPercent / 100;
 
         for ($i = 0; $i < $months; $i++) {
-            $interest = $amount * $monthlyRate;
-            $amount += $interest + $monthlyAddition;
-            $totalInterest += $interest;
+            $amount *= (1 + $rate);
+            $amount += $additionalPerMonth;
         }
 
-        return [
-            'final_amount' => round($amount, 2),
-            'total_interest' => round($totalInterest, 2),
-        ];
+        return round($amount, 2);
     }
 }
