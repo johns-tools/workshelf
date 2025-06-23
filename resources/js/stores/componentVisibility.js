@@ -9,6 +9,7 @@ export const useComponentVisibilityStore = defineStore('componentVisibility', {
         showElectricMileage: false,
         showPetrolMileage: false,
         showAreaConversion: false,
+        showPercentageIncrease: false,
     }),
     actions: {
         resetAll() {
@@ -18,6 +19,7 @@ export const useComponentVisibilityStore = defineStore('componentVisibility', {
             this.showElectricMileage = false
             this.showPetrolMileage = false
             this.showAreaConversion = false
+            this.showPercentageIncrease = false
         },
         showComponent(type) {
             this.resetAll()
@@ -27,6 +29,7 @@ export const useComponentVisibilityStore = defineStore('componentVisibility', {
             if (type === '@ev-mileage') this.showElectricMileage = true
             if (type === '@petrol-mileage') this.showPetrolMileage = true
             if (type === '@area-conversion') this.showAreaConversion = true
+            if (type === '@percentage-increase') this.showPercentageIncrease = true
         }
     }
 })
