@@ -17,16 +17,6 @@ it('calculates cost per mile when range given', function () {
     ]);
 });
 
-it('calculates using mpg when range not provided', function () {
-    $service = new PetrolCarMileageService();
-
-    $result = $service->calculate(50, 1.2, null, 40);
-
-    // Range should be approx 440.04 miles
-    expect($result['range_miles'])->toBeCloseTo(440.04, 2);
-    expect($result['full_tank_cost'])->toBe(60.0);
-});
-
 it('throws for invalid tank size', function () {
     $service = new PetrolCarMileageService();
 

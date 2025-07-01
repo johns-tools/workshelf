@@ -6,7 +6,6 @@ it('compounds with monthly percent and additional amount', function () {
     $service = new PercentageIncreaseService();
 
     $result = $service->compound(100, 3, 10, 5);
-    dump($result);
 
     expect($result)->toBe(117.65); // This needs some looking into. The page shows 102.53
 });
