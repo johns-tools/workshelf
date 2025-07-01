@@ -7,10 +7,17 @@ use App\Services\ElectricCarMileageService;
 use App\Http\Requests\CalculateEvMileageRequest;
 use Illuminate\Http\JsonResponse;
 
+/**
+ * Expose EV mileage calculations over the API.
+ */
 class ElectricCarMileageController extends Controller
 {
+    /** @var ElectricCarMileageService */
     private $electricCarMileageService;
 
+    /**
+     * Inject the electric car mileage service.
+     */
     public function __construct(ElectricCarMileageService $electricCarMileageService)
     {
         $this->electricCarMileageService = $electricCarMileageService;

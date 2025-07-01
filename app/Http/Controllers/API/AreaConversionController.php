@@ -7,15 +7,25 @@ use App\Services\AreaConversionService;
 use App\Http\Requests\CalculateAreaRequest;
 use Illuminate\Http\JsonResponse;
 
+/**
+ * Handle area conversion API requests.
+ */
 class AreaConversionController extends Controller
 {
+    /** Service used for converting area measurements. */
     private AreaConversionService $areaConversionService;
 
+    /**
+     * Inject dependencies.
+     */
     public function __construct(AreaConversionService $areaConversionService)
     {
         $this->areaConversionService = $areaConversionService;
     }
 
+    /**
+     * Calculate the area in cm² and m² from the request values.
+     */
     public function calculate(CalculateAreaRequest $request): JsonResponse
     {
         try {
