@@ -27,6 +27,6 @@ class PercentageIncreaseService
             $amount += $additionalPerMonth;
         }
 
-        return number_format($amount, 2);
+        return round($amount, 2);
     }
 }
