@@ -29,6 +29,9 @@
         <p class="mt-2 text-gray-600">Blog: <a href="https://oneaday.dev/blog" class="text-blue-600 hover:underline" target="_blank">https://oneaday.dev/blog</a></p>
         <p class="text-gray-600">Web: <a href="https://oneaday.dev/one-hundred-apis" class="text-blue-600 hover:underline" target="_blank">oneaday.dev/one-hundred-apis</a></p>
         <p class="text-gray-600">Contact: <a href="mailto:johns.development.projects@gmail.com" class="text-blue-600 hover:underline">johns.development.projects@gmail.com</a></p>
+        <p class="text-gray-600">
+          GitHub: <a href="https://github.com/johns-tools/" class="text-blue-600 hover:underline" target="_blank">https://github.com/johns-tools/</a>
+        </p>
     </header>
 
       <section class="mb-6">
