@@ -19,9 +19,12 @@ class PercentageIncreaseController extends Controller
     public function calculate(CalculatePercentageIncreaseRequest $request): JsonResponse
     {
         try {
-            $result = $this->percentageIncreaseService->calculate(
-                $request->input('initial_value'),
-                $request->input('final_value')
+
+            $result = $this->percentageIncreaseService->compound(
+                $request->input('principal'),
+                $request->input('months'),
+                $request->input('rate'),
+                $request->input('monthly_addition'),
             );
 
             return response()->json([

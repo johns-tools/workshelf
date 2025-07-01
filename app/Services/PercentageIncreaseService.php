@@ -11,7 +11,7 @@ class PercentageIncreaseService
     public function compound(
         float $initialAmount,
         int $months,
-        float $monthlyPercent,
+        float $annualPercent,
         float $additionalPerMonth = 0
     ): float {
         if ($initialAmount < 0 || $months < 0) {
@@ -19,13 +19,16 @@ class PercentageIncreaseService
         }
 
         $amount = $initialAmount;
-        $rate = $monthlyPercent / 100;
+        $monthlyRate = $annualPercent / 12 / 100;
 
-        for ($i = 0; $i < $months; $i++) {
-            $amount *= (1 + $rate);
+        for ($i = 0; $i < $months; $i++)
+        {
+            $amount *= (1 + $monthlyRate);
             $amount += $additionalPerMonth;
         }
 
-        return round($amount, 2);
+        dump(number_format($amount, 2));
+
+        return number_format($amount, 2);
     }
 }
