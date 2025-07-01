@@ -7,15 +7,25 @@ use App\Services\PetrolCarMileageService;
 use App\Http\Requests\CalculatePetrolMileageRequest;
 use Illuminate\Http\JsonResponse;
 
+/**
+ * Provide petrol vehicle mileage calculations.
+ */
 class PetrolCarMileageController extends Controller
 {
+    /** Service that calculates petrol mileage figures. */
     private PetrolCarMileageService $petrolCarMileageService;
 
+    /**
+     * Inject the petrol car mileage service.
+     */
     public function __construct(PetrolCarMileageService $petrolCarMileageService)
     {
         $this->petrolCarMileageService = $petrolCarMileageService;
     }
 
+    /**
+     * Calculate fuel cost and cost per mile for a petrol vehicle.
+     */
     public function calculate(CalculatePetrolMileageRequest $request): JsonResponse
     {
         try {
