@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OneHundredApisController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BlogAdminController;
+use App\Http\Controllers\BlogAdminAuthController;
 
 // # View
 Route::get('/cv', function(){
@@ -14,8 +15,15 @@ Route::get('/', [OneHundredApisController::class, 'home'])->middleware('throttle
 Route::get('/one-hundred-apis', [OneHundredApisController::class, 'home'])->middleware('throttle:heavy');
 Route::get('/blog', [BlogController::class, 'index'])->middleware('throttle:heavy');
 
-// Blog Admin Routes
+// Blog Admin Auth Routes
 Route::prefix('blog/admin')->name('blog.admin.')->group(function () {
+    Route::get('/login', [BlogAdminAuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [BlogAdminAuthController::class, 'login']);
+    Route::post('/logout', [BlogAdminAuthController::class, 'logout'])->name('logout');
+});
+
+// Blog Admin Routes (Protected)
+Route::prefix('blog/admin')->name('blog.admin.')->middleware('blog.admin.auth')->group(function () {
     Route::get('/', [BlogAdminController::class, 'index'])->name('index');
     Route::get('/create', [BlogAdminController::class, 'create'])->name('create');
     Route::post('/', [BlogAdminController::class, 'store'])->name('store');

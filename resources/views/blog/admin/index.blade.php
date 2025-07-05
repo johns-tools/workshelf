@@ -8,9 +8,17 @@
     <div class="max-w-6xl px-4 py-8 mx-auto">
         <div class="flex items-center justify-between mb-6">
             <h1 class="text-3xl font-bold">Blog Admin</h1>
-            <a href="{{ route('blog.admin.create') }}" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
-                Create New Post
-            </a>
+            <div class="flex items-center space-x-4">
+                <a href="{{ route('blog.admin.create') }}" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                    Create New Post
+                </a>
+                <form method="POST" action="{{ route('blog.admin.logout') }}" class="inline">
+                    @csrf
+                    <button type="submit" class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">
+                        Logout
+                    </button>
+                </form>
+            </div>
         </div>
 
         @if(session('success'))
