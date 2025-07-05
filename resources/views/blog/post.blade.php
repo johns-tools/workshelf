@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="prose whitespace-pre-wrap prose-invert max-w-none">
+        <div class="prose-sm prose whitespace-pre-line prose-invert max-w-none">
             {!! \Illuminate\Support\Str::markdown($post['content']) !!}
         </div>
 

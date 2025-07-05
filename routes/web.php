@@ -15,7 +15,7 @@ Route::get('/cv', function(){
 Route::get('/', [OneHundredApisController::class, 'home'])->middleware('throttle:heavy');
 Route::get('/one-hundred-apis', [OneHundredApisController::class, 'home'])->middleware('throttle:heavy');
 Route::get('/blog', [BlogController::class, 'index'])->middleware('throttle:heavy');
-Route::get('/blog/post/{id}', [BlogPostController::class, 'show'])->name('blog.post.show')->middleware('throttle:heavy');
+Route::get('/blog/post/{id}', [BlogPostController::class, 'show'])->name('blog.post.show');//->middleware('throttle:heavy');
 
 // Blog Admin Auth Routes
 Route::prefix('blog/admin')->name('blog.admin.')->group(function () {
