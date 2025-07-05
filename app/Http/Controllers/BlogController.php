@@ -10,9 +10,6 @@ class BlogController extends Controller
 {
     public function index(Request $request)
     {
-        $devToArticles = app(DevToService::class)
-            ->getSeriesArticles('johns-dev-projects', '100APIsOfCode');
-
         $localPosts = app(BlogPostService::class)->getPublished();
 
         // Convert local posts to same format as Dev.to articles
@@ -26,7 +23,7 @@ class BlogController extends Controller
         })->all();
 
         // Combine and sort by date
-        $allArticles = collect(array_merge($devToArticles, $localArticles))
+        $allArticles = collect($localArticles)
             ->sortByDesc('published_at')
             ->values()
             ->all();
