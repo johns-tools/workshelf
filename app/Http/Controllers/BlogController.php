@@ -18,7 +18,7 @@ class BlogController extends Controller
                 'title' => $post['title'],
                 'published_at' => $post['created_at'],
                 'tag_list' => ['local'],
-                'url' => route('blog.admin.show', $post['id']),
+                'url' => route('blog.post.show', $post['id']),
             ];
         })->all();
 
