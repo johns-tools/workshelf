@@ -13,11 +13,11 @@
             </div>
         </div>
 
-        <div class="prose prose-invert max-w-none">
+        <div class="prose whitespace-pre-wrap prose-invert max-w-none">
             {!! \Illuminate\Support\Str::markdown($post['content']) !!}
         </div>
 
-        <div class="mt-8 pt-6 border-t border-gray-700">
+        <div class="pt-6 mt-8 border-t border-gray-700">
             <a href="/blog" class="text-blue-400 hover:text-blue-300">← Back to Blog</a>
         </div>
     </div>
