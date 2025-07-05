@@ -67,3 +67,7 @@ Calculates the final value using monthly compounding.
 ---
 
 Visit `/blog` to read posts from the **100APIsOfCode** series.
+
+## Claude Code - WSL repo added to testing
+
+This repository has been added to WSL for testing with Claude Code integration.
