@@ -6,15 +6,15 @@
 </head>
 <body class="h-full text-white bg-gray-900">
     <div class="max-w-4xl px-4 py-8 mx-auto">
-        <div class="mb-6">
+        <div class="mb-2">
             <div class="flex items-center justify-between">
                 <h1 class="text-3xl font-bold">{{ $post['title'] }}</h1>
                 <div class="flex items-center space-x-4">
                     <span class="px-2 py-1 text-xs font-semibold rounded-full {{ $post['published'] ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800' }}">
                         {{ $post['published'] ? 'Published' : 'Draft' }}
                     </span>
-                    <a href="{{ route('blog.admin.edit', $post['id']) }}" 
-                       class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                    <a href="{{ route('blog.admin.edit', $post['id']) }}"
+                       class="px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700">
                         Edit
                     </a>
                 </div>
@@ -30,16 +30,16 @@
             </div>
         </div>
 
-        <div class="bg-gray-800 rounded-lg p-6">
-            <div class="prose prose-invert max-w-none">
+        <div class="p-6 bg-gray-800 rounded-lg">
+            <div class="prose whitespace-pre-line prose-invert max-w-none">
                 {!! \Illuminate\Support\Str::markdown($post['content']) !!}
             </div>
         </div>
 
-        <div class="mt-6 flex items-center space-x-4">
-            <a href="{{ route('blog.admin.index') }}" 
+        <div class="flex items-center mt-6 space-x-4">
+            <a href="{{ route('blog.admin.index') }}"
                class="text-blue-400 hover:text-blue-300">← Back to Posts</a>
-            <a href="{{ route('blog.admin.edit', $post['id']) }}" 
+            <a href="{{ route('blog.admin.edit', $post['id']) }}"
                class="text-yellow-400 hover:text-yellow-300">Edit Post</a>
             <form method="POST" action="{{ route('blog.admin.destroy', $post['id']) }}" class="inline">
                 @csrf

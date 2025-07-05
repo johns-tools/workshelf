@@ -6,7 +6,7 @@
 </head>
 <body class="h-full text-white bg-gray-900">
     <div class="max-w-4xl px-4 py-8 mx-auto">
-        <div class="mb-6">
+        <div class="mb-2">
             <h1 class="text-3xl font-bold">{{ $post['title'] }}</h1>
             <div class="mt-2 text-sm text-gray-400">
                 Published: {{ \Carbon\Carbon::parse($post['created_at'])->format('M d, Y') }}

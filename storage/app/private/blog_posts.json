@@ -2,10 +2,10 @@
     {
         "id": "8bbd1544-e4f1-4b9c-acd5-16678374fecc",
         "title": "Day Three on the API Development",
-        "content": "___\r\n**Two new API endpoints added:**\r\n`Electric vehicle charge cost per mile.` \r\n`Petrol vehicle fuel cost and cost per mile.`\r\n\r\n**I have also updated the UI with a few quality of life additions:**\r\n\r\n`A dynamic calculation to show how many APIs exist out of the target 100.`\r\n`A sort of home page that contains a brief description of each endpoint.`\r\n`A better cantered UI with a max width limit`\r\n\r\n**Other stuff:**\r\nI removed the python `Milliseconds to Minutes` calculation and replaced it with `Carbon\\CarbonInterval` as I felt the calculation was to simple to make use of python. But I will being python back for something heavy later on.\r\n___\r\n![Image description](https:\/\/dev-to-uploads.s3.amazonaws.com\/uploads\/articles\/s4hrihbmjg0e20m3t0m3.png)",
+        "content": "**Two new API endpoints added:**\r\n`Electric vehicle charge cost per mile.` \r\n`Petrol vehicle fuel cost and cost per mile.`\r\n\r\n**I have also updated the UI with a few quality of life additions:**\r\n\r\n`A dynamic calculation to show how many APIs exist out of the target 100.`\r\n`A sort of home page that contains a brief description of each endpoint.`\r\n`A better cantered UI with a max width limit`\r\n\r\n**Other stuff:**\r\nI removed the python `Milliseconds to Minutes` calculation and replaced it with `Carbon\\CarbonInterval` as I felt the calculation was to simple to make use of python. But I will being python back for something heavy later on.\r\n___\r\n![Image description](https:\/\/dev-to-uploads.s3.amazonaws.com\/uploads\/articles\/s4hrihbmjg0e20m3t0m3.png)",
         "slug": "day-three-on-the-api-development",
         "published": "1",
         "created_at": "2025-07-05T05:22:24.182986Z",
-        "updated_at": "2025-07-05T06:10:49.966493Z"
+        "updated_at": "2025-07-05T06:15:24.000345Z"
     }
 ]
