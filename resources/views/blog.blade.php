@@ -26,6 +26,11 @@
                 <div class="text-sm text-gray-400">
                     {{ \Carbon\Carbon::parse($article['published_at'])->format('Y-m-d') }}
                 </div>
+                @if(!empty($article['content_preview']))
+                    <div class="mt-2 text-gray-300 text-sm">
+                        {{ $article['content_preview'] }}
+                    </div>
+                @endif
                 @if(!empty($article['tags']))
                     <div class="mt-1 text-sm">
                         @foreach($article['tags'] as $tag)
