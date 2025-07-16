@@ -1,10 +1,14 @@
+@import './spherical-gradient-bg.css';
+@import './api-backtick.css';
+
 /* Animation for API list items */
 .api-list-animate li {
-  will-change: opacity, transform, filter;
-  opacity: 0;
-  transform: translateX(60px) scale(0.98);
-  filter: blur(8px);
+    will-change: opacity, transform, filter;
+    opacity: 0;
+    transform: translateX(60px) scale(0.98);
+    filter: blur(8px);
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

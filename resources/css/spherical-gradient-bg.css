@@ -1,0 +1,32 @@
+/* Spherical gradient background with slow glow pulse effect */
+.spherical-gradient-bg {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 120vw;
+    height: 120vw;
+    min-width: 1200px;
+    min-height: 1200px;
+    max-width: 2000px;
+    max-height: 2000px;
+    transform: translate(-50%, -10%);
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 0%, #60a5fa 0%, #1e293b 60%, #0f172a 100%);
+    opacity: 0.7;
+    animation: spherical-glow-pulse 8s ease-in-out infinite;
+}
+
+@keyframes spherical-glow-pulse {
+
+    0%,
+    100% {
+        filter: blur(40px) brightness(0.5);
+        opacity: 0.7;
+    }
+
+    50% {
+        filter: blur(80px) brightness(1.1);
+        opacity: 1;
+    }
+}

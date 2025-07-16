@@ -15,6 +15,7 @@
     </script>
 </head>
     <body class="h-full text-white bg-gray-900">
+        <div class="spherical-gradient-bg"></div>
         <div id="app" class="max-w-[750px] mx-auto">
             <twenty-first-toolbar :config="toolbarConfig"></twenty-first-toolbar>
             <one-hundred-apis ></one-hundred-apis>

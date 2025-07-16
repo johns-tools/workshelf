@@ -1,0 +1,15 @@
+.api-backtick {
+    display: inline-block;
+    background: #1e293b;
+    color: #38bdf8;
+    font-family: "Fira Mono", "Consolas", "Menlo", monospace;
+    font-size: 1em;
+    font-weight: 400;
+    border-radius: 0.4em;
+    padding: 0.08em 0.5em 0.08em 0.5em;
+    margin: 0 0.1em;
+    box-shadow: 0 2px 8px 0 rgba(30, 41, 59, 0.18);
+    border: 1px solid #334155;
+    letter-spacing: 0.01em;
+    transition: none;
+}
