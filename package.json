@@ -6,6 +6,8 @@
         "dev": "vite"
     },
     "devDependencies": {
+        "@21st-extension/toolbar-vue": "^0.5.14",
+        "@21st-extension/vue": "^0.5.14",
         "@vitejs/plugin-vue": "^5.2.1",
         "autoprefixer": "^10.4.20",
         "axios": "^1.7.4",

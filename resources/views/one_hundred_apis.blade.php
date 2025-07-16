@@ -14,8 +14,9 @@
       gtag('config', 'G-R8QDSQRD0Z');
     </script>
 </head>
-    <body class="h-full bg-gray-900 text-white">
+    <body class="h-full text-white bg-gray-900">
         <div id="app" class="max-w-[750px] mx-auto">
+            <twenty-first-toolbar :config="toolbarConfig"></twenty-first-toolbar>
             <one-hundred-apis ></one-hundred-apis>
         </div>
     </body>

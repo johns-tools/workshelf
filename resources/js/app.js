@@ -1,6 +1,8 @@
 import "./bootstrap";
 import { createApp } from 'vue';
 import { createPinia } from 'pinia'
+import { TwentyFirstToolbar } from '@21st-extension/toolbar-vue';
+import { VuePlugin } from '@21st-extension/vue';
 
 import MsToMinConversion from './components/MsToMinConversion.vue'
 import InterestRepaymentCalculation from './components/InterestRepaymentCalculation.vue'
@@ -16,7 +18,15 @@ import APIsInformation from './components/APIsInformation.vue'
 // import Stats from './components/Stats.vue';
 // import ReverbMessageListener from './components/ReverbMessageListener.vue';
 
-const app = createApp({});
+const app = createApp({
+  data() {
+    return {
+      toolbarConfig: {
+        plugins: [VuePlugin],
+      },
+    };
+  },
+});
 const pinia = createPinia()
 
 // app.component('login', Login);
@@ -25,6 +35,7 @@ const pinia = createPinia()
 
 app.use(pinia)
 
+app.component('twenty-first-toolbar', TwentyFirstToolbar)
 app.component('msToMinConversion', MsToMinConversion)
 app.component('interestRepaymentCalculation', InterestRepaymentCalculation)
 app.component('electricCarMileage', ElectricCarMileage)
