@@ -40,7 +40,7 @@ class GenerateLoginAuthKeys extends Command
         if($count > 100)
         {
             $this->info("Number of records to create has to be 100 or less.");
-            return 0; 
+            return 0;
         }
 
         // If the count is 0 then reset without any data creation.

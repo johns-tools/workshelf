@@ -19,16 +19,16 @@ class GenerateBatDocument extends Command
         // Dispatch the job
         GenerateBatDocumentJob::dispatch($documentType, $departmentId);
 
-        $this->info('✓ Bat document generation job dispatched');
-        
+        $this->info('Bat document generation job dispatched');
+
         if ($documentType) {
-            $this->line("  Type: {$documentType}");
+            $this->line("Type: {$documentType}");
         }
-        
+
         if ($departmentId) {
-            $this->line("  Department ID: {$departmentId}");
+            $this->line("Department ID: {$departmentId}");
         }
-        
-        $this->line("  Job will be processed by the queue worker");
+
+        $this->line("Job will be processed by the queue worker");
     }
 }
