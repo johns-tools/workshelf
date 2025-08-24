@@ -77,12 +77,7 @@ class GenerateBatDocument extends Command
         }
 
         // Fallback to simple default content
-        return "Content for {$docType}
-
-This is sample content for {$docType}.
-
-Created: " . now()->toDateString() . "
-Status: Active";
+        return "Content for {$docType} This is sample content for {$docType}. Created: " . now()->toDateString() . " Status: Active";
     }
 
     private function getRandomInterval()

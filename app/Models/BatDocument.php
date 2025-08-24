@@ -4,13 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class BatDocument extends Model
 {
     use SoftDeletes;
-    
+
     protected $table = 'legal_documents';
 
     protected $fillable = [
@@ -79,6 +78,7 @@ class BatDocument extends Model
     }
 }
 
+// Hmm, interesting.
 class DocumentRevision extends Model
 {
     use SoftDeletes;
@@ -94,6 +94,7 @@ class DocumentRevision extends Model
     }
 }
 
+// Hmm,interesting.
 class DocumentAnnotation extends Model
 {
     use SoftDeletes;
