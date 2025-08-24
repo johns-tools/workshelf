@@ -81,6 +81,7 @@ class GenerateBatDocument extends Command
         return "Content for {$docType} This is sample content for {$docType}. Created: " . now()->toDateString() . " Status: Active";
     }
 
+    // Not going to be used, just place holder for testing.
     private function getRandomInterval()
     {
         return rand(60, 600); // Random interval between 1-10 minutes in seconds
