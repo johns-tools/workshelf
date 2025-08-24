@@ -25,7 +25,7 @@ class BatDocumentService
     {
         $docType = $docType ?? $this->getRandomDocumentType();
         $content = $this->generateDocumentContent($docType);
-        
+
         $document = BatDocument::create([
             'title' => $this->generateTitle($docType),
             'document_type' => $docType,
@@ -71,34 +71,31 @@ class BatDocumentService
     private function generateDocumentContent(string $docType): string
     {
         $jsonFile = 'document_templates.json';
-        
+
         if (Storage::disk('local')->exists($jsonFile)) {
             $jsonContent = Storage::disk('local')->get($jsonFile);
             $templates = json_decode($jsonContent, true);
-            
+
             if (isset($templates[$docType])) {
                 return $templates[$docType];
             }
         }
 
-        return "Content for {$docType}
-
-This is sample content for {$docType}.
-
-Created: " . now()->toDateString() . "
-Status: Active";
+        return "Content for {$docType} This is sample content for {$docType}.Created: " . now()->toDateString() . " Status: Active";
     }
 
     private function buildFileContent(BatDocument $document, string $content): string
     {
-        return "Document Type: {$document->document_type}
-Title: {$document->title}
-Classification: {$document->classification}
-Version: {$document->version}
-Created: {$document->created_at->toISOString()}
-Author ID: {$document->author_id}
-Department ID: {$document->department_id}
-
-{$content}";
+        // Is just a string and not an object, is tricky to see at first.
+        // Don't like it will re-create it when I have to.
+        return "Document Type: {
+                $document->document_type}
+                Title: {$document->title}
+                Classification: {$document->classification}
+                Version: {$document->version}
+                Created: {$document->created_at->toISOString()}
+                Author ID: {$document->author_id}
+                Department ID: {$document->department_id}
+                $content}"; // <- Nasty.
     }
 }

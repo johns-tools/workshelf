@@ -21,11 +21,13 @@ class GenerateBatDocument extends Command
 
         $this->info('Bat document generation job dispatched');
 
-        if ($documentType) {
+        if ($documentType)
+        {
             $this->line("Type: {$documentType}");
         }
 
-        if ($departmentId) {
+        if ($departmentId)
+        {
             $this->line("Department ID: {$departmentId}");
         }
 
