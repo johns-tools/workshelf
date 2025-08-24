@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Storage;
 
 class GenerateBatDocument extends Command
 {
+    // Need this to the be job instance that has a life span.
     protected $signature = 'bat:generate {--continuous : Run continuously with random intervals}';
 
     protected $description = 'Generate random bat documents between 1 and 10 minutes';
